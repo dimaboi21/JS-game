@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Game Ball</title>
+  </head>
+  <body>
+    <section class="game">
+      <div class="container">
+        <div class="screen">
+          <h1 class="game__titile">Зіграй в гру!</h1>
+          <button class="start" id="start">Почати гру</button>
+        </div>
+
+        <div class="screen">
+            <h2 class="game__title">виберіть час!</h2>
+            <ul class="time__list" id="time-list">
+                <li class="time__item">
+                    <button class="time__btn" data-time="10">10 секунд</button>
+                </li>
+                <li class="time__item">
+                    <button class="time__btn" data-time="20">20 секунд</button>
+                </li>
+                <li class="time__item">
+                    <button class="time__btn" data-time="30">30 секунд</button>
+                </li>
+            </ul>
+        </div>
+
+        <div class="screen">
+            <h2 class="game__title">Спіймай максимальну кількість мячів!</h2>
+            <p class="game__time">Залишилось<span id="time">00:00</span></p>
+            <div class="board" id="board"></div>
+            <button class="game__new">Грати ще!</button>
+        </div>
+
+      </div>
+    </section>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
