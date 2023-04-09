@@ -9,6 +9,7 @@ const timeEl = document.querySelector("#time");
 const board = document.querySelector("#board");
 const reload = document.querySelector(".game__new");
 let time = 0;
+let score = 0;
 
 startBtn.addEventListener("click", (event) => {
   event.preventDefault();
@@ -24,8 +25,17 @@ timeList.addEventListener("click", (event) => {
   console.log(time);
 });
 
-function srartGame() {
+board.addEventListener("click", (event) => {
+  if (event.target.classList.contains("circle")) {
+    score++;
+    event.target.remove();
+    createRandomCircle();
+  }
+});
+
+function startGame() {
   setInterval(decreaseTime, 1000);
+  createRandomCircle();
   setTime(time);
 }
 
@@ -43,6 +53,30 @@ function decreaseTime() {
 
 function setTime(value) {
   timeEl.innerHTML = `00:${value}`;
+}
+
+function finishGame() {
+  timeEl.parentNode.classList.add("hide");
+  board.innerHtml = `<h2 class='board__inner'>ваш рахунок: ${score} </h2>`;
+}
+
+function createRandomCircle() {
+  const circle = document.createElement("div");
+  const size = getRandomNumber(20, 60);
+  const { width, height } = board.getBoundingClientRect();
+  const x = getRandomNumber(0, width - size);
+  const y = getRandomNumber(0, height - size);
+
+  circle.classList.add("circle");
+  circle.style.width = `${size}px`;
+  circle.style.height = `${size}px`;
+  circle.style.top = `${y}px`;
+  circle.style.left = `${x}px`;
+  board.append(circle);
+}
+
+function getRandomNumber(min, max) {
+  return Math.round(Math.random() * (max - min) + min);
 }
 
 reload.addEventListener("click", () => {
