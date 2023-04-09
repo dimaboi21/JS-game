@@ -25,7 +25,6 @@
   
   body {
     font-family: "Open Sans", sans-serif;
-    /* шрифти берем з макету */
     font-style: normal;
     font-weight: 400;
   }
@@ -40,13 +39,13 @@
 
   .game{
     overflow: hidden;
-    height: 100vb;
-    background-image: linear-gradient(90deg, #903939 0%, #485563 100%);
+    height: 100vh;
+    background-image: url(./img/fon__game.jpg);
   }
 
   .game__title{
     font-size: 48px;
-    background-color: #333;
+    background-color: #1a1a1a;
     padding: 0 20px;
     border-radius: 20px;
     color: #fff;
@@ -61,7 +60,7 @@
     border-radius: 20px;
   }
   .start:hover{
-    color: #6b00d6;
+    color: #9b9b9b;
   }
 
   .screen{
@@ -98,6 +97,7 @@
   .game__time{
     margin-bottom: 15px;
     font-size: 28px;
+    color: #fff;
   }
 
   .board{
@@ -109,7 +109,7 @@
     max-width: 500px;
     width: 100%;
     height: 500px;
-    background-image: linear-gradient(90deg, #485563 0%, #598084 100%);
+    background-image: linear-gradient(90deg, #c0c0c0 0%, #6e6e6e 100%);
     border-radius: 30px;
     overflow: hidden;
     margin-bottom: 20px;
@@ -131,7 +131,7 @@
   }
 
   .circle{
-    background-image: url(./img/ball.svg);
+    background-image: url(./img/apple.svg);
     background-size: cover;
     cursor:pointer;
     position: absolute;
