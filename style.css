@@ -39,8 +39,9 @@
 
   .game{
     overflow: hidden;
+    background-position: center center;
     height: 100vh;
-    background-image: url(./img/fon__game.jpg);
+    background-image: url(./img/Fan-game-1.jpg);
   }
 
   .game__title{
@@ -140,7 +141,7 @@
   @media screen and (max-width:768px) {
     .game__title{
       font-size: 32px;
-      margin-bottom: 0;
+      margin-bottom: 15px;
       margin-top: 10px;
     }
     .game__new{
